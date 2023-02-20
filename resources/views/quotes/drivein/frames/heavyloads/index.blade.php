@@ -27,7 +27,7 @@
                         <x-jet-label value="* Seleccione el Calibre" />
                         <select name="caliber" class="inputjet w-full text-xs uppercase">
                             <option value="12" @if (old('caliber')==12) selected @endif>12</option>
-                            <option value="14" @if (old('caliber')==14) selected @endif>14</option>
+                            <!-- <option value="14" @if (old('caliber')==14) selected @endif>14</option> -->
                         </select>
                         <x-jet-input-error for='caliber' /><br>
                         <x-jet-label value="* Altura de Pandeo" />
