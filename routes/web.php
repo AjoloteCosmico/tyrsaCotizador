@@ -20,6 +20,8 @@ use App\Http\Controllers\DoubleDeepTypeL25JoistController;
 use App\Http\Controllers\DoubleDeepTypeL2JoistController;
 use App\Http\Controllers\DoubleDeepTypeLRJoistController;
 use App\Http\Controllers\DoubleDeepTypeStructuralJoistController;
+
+use App\Http\Controllers\DriveInController;
 use App\Http\Controllers\FloorController;
 use App\Http\Controllers\FloorReinforcementController;
 use App\Http\Controllers\FramesController;
@@ -218,6 +220,21 @@ Route::group(['middleware' => ['auth:sanctum'], 'verified'], function()
 
     Route::get('/double_deep_quotations/{id}', [QuotationController::class, 'doubledeep'])->name('double_deep_quotations.show');
 
+
+    #________________Drive in
+    Route::get('/drivein', [DriveInController::class, 'index'])->name('drivein.index');
+    Route::get('/drivein/{id}', [DriveInController::class, 'show'])->name('drivein.show');
+    Route::get('/drivein/frames/{id}', [MenuFrameController::class, 'drive_show'])->name('menuframes.drive_show');
+    Route::get('/drives/joist/{id}', [MenuJoistController::class, 'drive_show'])->name('menujoists.drive_show');
+
+    Route::get('/drivein_carga_pesada/{id}', [FramesController::class, 'drive_show'])->name('frames.drive_show');
+    Route::post('/drivein_carga_pesada', [FramesController::class, 'drive_store'])->name('frames.drive_store');
+
+    
+    Route::get('/drivein_marcos_estructurales/{id}', [StructuralFrameworksController::class, 'drive_show'])->name('structuralframeworks.drive_show');
+    Route::post('/drive_marcos_estructurales', [StructuralFrameworksController::class, 'drive_store'])->name('structuralframeworks.drive_store');
+
+    #________________END Drive IN
 
 
     Route::get('/singlepieces/{id}', [SinglePieceController::class, 'show'])->name('singlepieces.show');
