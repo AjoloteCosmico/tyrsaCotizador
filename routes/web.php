@@ -222,18 +222,37 @@ Route::group(['middleware' => ['auth:sanctum'], 'verified'], function()
 
 
     #________________Drive in
+    #Menu
     Route::get('/drivein', [DriveInController::class, 'index'])->name('drivein.index');
     Route::get('/drivein/{id}', [DriveInController::class, 'show'])->name('drivein.show');
+    #Menu de marcos
     Route::get('/drivein/frames/{id}', [MenuFrameController::class, 'drive_show'])->name('menuframes.drive_show');
+    #Menu de vigas
     Route::get('/drives/joist/{id}', [MenuJoistController::class, 'drive_show'])->name('menujoists.drive_show');
-
+    #MArcos
     Route::get('/drivein_carga_pesada/{id}', [FramesController::class, 'drive_show'])->name('frames.drive_show');
     Route::post('/drivein_carga_pesada', [FramesController::class, 'drive_store'])->name('frames.drive_store');
 
-    
     Route::get('/drivein_marcos_estructurales/{id}', [StructuralFrameworksController::class, 'drive_show'])->name('structuralframeworks.drive_show');
     Route::post('/drive_marcos_estructurales', [StructuralFrameworksController::class, 'drive_store'])->name('structuralframeworks.drive_store');
+    #vigas
+    Route::get('/drivein_vigas_tipo_L_2/{id}', [TypeL2JoistController::class, 'drive_show'])->name('typel2joists.drive_show');
+    Route::post('/drivein_vigas_tipo_L_2/', [TypeL2JoistController::class, 'drive_store'])->name('typel2joists.drive_store');
 
+    Route::get('/drivein_vigas_tipo_L_2_5/{id}', [TypeL25JoistController::class, 'drive_show'])->name('typel25joists.drive_show');
+    Route::post('/drivein_vigas_tipo_L_2_5/', [TypeL25JoistController::class, 'drive_store'])->name('typel25joists.drive_store');
+    
+
+    Route::get('/drivein_vigas_tipo_Box_2/{id}', [TypeBox2JoistController::class, 'drive_show'])->name('typebox2joists.drive_show');
+    Route::post('/drivein_vigas_tipo_Box_2/', [TypeBox2JoistController::class, 'drive_store'])->name('typebox2joists.drive_store');
+    
+    Route::get('/drivein_vigas_tipo_Box_25/{id}', [TypeBox25JoistController::class, 'drive_show'])->name('typebox25joists.drive_show');
+    Route::post('/drivein_vigas_tipo_Box_25/', [TypeBox25JoistController::class, 'drive_store'])->name('typebox25joists.drive_store');
+    
+
+    Route::get('/drivein_vigas_tipo_Structural/{id}', [TypeStructuralJoistController::class, 'drive_show'])->name('typestructuraljoists.drive_show');
+    Route::post('/drivein_vigas_tipo_Structural/', [TypeStructuralJoistController::class, 'drive_store'])->name('typestructuraljoists.drive_store');
+    
     #________________END Drive IN
 
 

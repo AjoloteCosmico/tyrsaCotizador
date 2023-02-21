@@ -49,10 +49,10 @@
                         </select>
                         <x-jet-input-error for='camber' /><br>
 
-                        <x-jet-label value="* Patín" />
+                        <!-- <x-jet-label value="* Patín" />
                         <input type="text" name="skate" class="inputjet w-full text-xs uppercase" />
                         <x-jet-input-error for='skate' /><br>
-                        
+                         -->
                         <x-jet-label value="* Capacidad de carga requerida por par de vigas (Kg)" />
                         <input type="number" name="weight" class="inputjet w-full text-xs uppercase" />
                         <x-jet-input-error for='weight' /><br>

@@ -13,7 +13,7 @@
             <input type="hidden" name="Quotation_Id" value="{{$Quotation_Id}}">
             <div  class="row bg-white p-4 shadow-lg rounded-lg">
                 <div class="col-sm-8 col-xs-12">
-                    <h2><i class="fa-solid fa-crop-simple"></i>&nbsp;Marcos Estructurales</h2>
+                    <h2><i class="fa-solid fa-crop-simple"></i>&nbsp;Marcos Estructurales Drive In</h2>
                     <span>Favor de Seleccionar y llenar los campos solicitados para realizar la cotización.</span>
                     <div class="card-body text-center">
                         <img src="{{asset('vendor/img/postes/logo.png')}}" class="img-thumbnail img-fluid max-h-80 rounded mx-auto d-block" alt="">
@@ -27,15 +27,17 @@
                         <x-jet-label value="* Seleccione el Calibre" />
                         <select name="caliber" class="inputjet w-full text-xs uppercase">
                             <option value="EST-3" @if (old('caliber')=='EST-3') selected @endif>EST-3</option>
-                            <option value="EST-4" @if (old('caliber')=='EST-4') selected @endif>EST-4</option>
-                            {{--  <option value="14" @if (old('caliber')==14) selected @endif>14</option>  --}}
+                            <!-- <option value="EST-4" @if (old('caliber')=='EST-4') selected @endif>EST-4</option>
+                            {{--  <option value="14" @if (old('caliber')==14) selected @endif>14</option>  --}} -->
                         </select>
                         <x-jet-input-error for='caliber' /><br>
                         <x-jet-label value="* Altura de Pandeo" />
                         <select name="buckling_structural" class="inputjet w-full text-xs uppercase">
                             @foreach ($buckling_structural as $row)
+                            
                                 <option value="{{$row->buckling_structural}}" @if (old('buckling_structural')==$row->buckling_structural) selected @endif>{{$row->buckling_structural}}</option>
-                            @endforeach
+                            
+                                @endforeach
                         </select>
                         <x-jet-input-error for='buckling_structural' /><br>
                         <x-jet-label value="* Capacidad de carga por módulo en Kg" />
@@ -60,7 +62,7 @@
                         <button type="submit" class="btn btn-blue mb-2">
                             <i class="fa-solid fa-calculator fa-xl"></i>&nbsp; Calcular
                         </button>
-                        <a href="{{route('menuframes.show', $Quotation_Id)}}" class="btn btn-black mb-2">
+                        <a href="{{route('menuframes.drive_show', $Quotation_Id)}}" class="btn btn-black mb-2">
                             <i class="fa-solid fa-rotate-left fa-xl"></i>&nbsp; Cancelar
                         </a>
                     </div>

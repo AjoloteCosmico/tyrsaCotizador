@@ -49,8 +49,8 @@
                         </select>
                         <x-jet-input-error for='camber' /><br>
 
-                        <x-jet-label value="* Patín" />
-                        <input type="text" name="skate" class="inputjet w-full text-xs uppercase" />
+                        <!-- <x-jet-label value="* Patín" /> -->
+                        <input type="hidden" value="1" name="skate" class="inputjet w-full text-xs uppercase" />
                         <x-jet-input-error for='skate' /><br>
                         
                         <x-jet-label value="* Capacidad de carga requerida por par de vigas (Kg)" />
@@ -66,7 +66,7 @@
                         <button type="submit" class="btn btn-blue mb-2">
                             <i class="fa-solid fa-calculator fa-xl"></i>&nbsp; Calcular
                         </button>
-                        <a href="{{route('menujoists.show', $Quotation_Id)}}" class="btn btn-black mb-2">
+                        <a href="{{route('menujoists.drive_show', $Quotation_Id)}}" class="btn btn-black mb-2">
                             <i class="fa-solid fa-rotate-left fa-xl"></i>&nbsp; Cancelar
                         </a>
                     </div>

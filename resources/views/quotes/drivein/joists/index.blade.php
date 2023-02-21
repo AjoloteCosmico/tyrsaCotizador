@@ -36,9 +36,9 @@
                 <div class="col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Tipo L 2.0 Calibres: 10, 12 y 16</h5>
+                            <h5 class="card-title">Tipo L 2.0 Calibres: 12 </h5>
                             <p class="card-text">Cotizador de Vigas</p>
-                            <a href="{{ route('typel2joists.show', $Quotation_Id) }}" class="btn btn-primary">
+                            <a href="{{ route('typel2joists.drive_show', $Quotation_Id) }}" class="btn btn-primary">
                                 <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -68,9 +68,9 @@
                 <div class="col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Tipo L 2.5 Calibres: 10, 12 y 16</h5>
+                            <h5 class="card-title">Tipo L 2.5 Calibre 12 </h5>
                             <p class="card-text">Cotizador de Vigas</p>
-                            <a href="{{ route('typel25joists.show', $Quotation_Id) }}" class="btn btn-primary">
+                            <a href="{{ route('typel25joists.drive_show', $Quotation_Id) }}" class="btn btn-primary">
                                 <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -102,7 +102,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Tipo Caja 2.0 Calibre 12</h5>
                             <p class="card-text">Cotizador de Vigas</p>
-                            <a href="{{ route('typebox2joists.show', $Quotation_Id) }}" class="btn btn-primary">
+                            <a href="{{ route('typebox2joists.drive_show', $Quotation_Id) }}" class="btn btn-primary">
                                 <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -134,7 +134,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Tipo Caja 2.5 Calibre 12 </h5>
                             <p class="card-text">Cotizador de Vigas</p>
-                            <a href="{{ route('typebox25joists.show', $Quotation_Id) }}" class="btn btn-primary">
+                            <a href="{{ route('typebox25joists.drive_show', $Quotation_Id) }}" class="btn btn-primary">
                                 <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -150,7 +150,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Tipo Estructural</h5>
                             <p class="card-text">Cotizador de Vigas</p>
-                            <a href="{{ route('typestructuraljoists.show', $Quotation_Id) }}" class="btn btn-primary">
+                            <a href="{{ route('typestructuraljoists.drive_show', $Quotation_Id) }}" class="btn btn-primary">
                                 <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path fill-rule="evenodd"
                                         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="col-sm-6 col-xs-12">
+                <!-- <div class="col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Tipo Silla</h5>
@@ -208,12 +208,12 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="row text-end">
             <div class="container">
-                {!! Form::open(['method'=>'GET','route'=>['selectivo.show', $Quotation_Id]]) !!}
+                {!! Form::open(['method'=>'GET','route'=>['drivein.show', $Quotation_Id]]) !!}
                 <button type="submit" class="btn btn-black mb-2">
                     <i class="fa-solid fa-rotate-left fa-xl"></i>&nbsp; Menú
                 </button>

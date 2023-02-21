@@ -58,10 +58,10 @@
                         </table>
                     </div>
                     <div class="form-group p-2 gap-2 flex items-center">
-                        <a href="{{route('typel2joists.show', $Quotation_Id)}}" class="btn btn-blue mb-2">
+                        <a href="{{route('typel2joists.drive_show', $Quotation_Id)}}" class="btn btn-blue mb-2">
                             <i class="fa-solid fa-right-left fa-xl"></i>&nbsp; Corregir
                         </a>
-                        <a href="{{route('menujoists.show', $Quotation_Id)}}" class="btn btn-black mb-2">
+                        <a href="{{route('menujoists.drive_show', $Quotation_Id)}}" class="btn btn-black mb-2">
                             <i class="fa-solid fa-rotate-left fa-xl"></i>&nbsp; Guardar
                         </a>
                     </div>
