@@ -11,7 +11,7 @@
         <div class="row m-3">
             <div  class="row bg-white p-4 shadow-lg rounded-lg">
                 <div class="col-sm-4 col-xs-12">
-                    <h2><i class="fa-solid fa-crop-simple"></i>&nbsp;Marcos</h2>
+                    <h2><i class="fa-solid fa-crop-simple"></i>&nbsp;Marcos / Drive IN</h2>
                     <span>Los datos de su cotización se muestran a continuación.</span>
                     <div class="card-body">
                         <div class="container">
