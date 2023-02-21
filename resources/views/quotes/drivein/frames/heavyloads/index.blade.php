@@ -9,7 +9,7 @@
 @section('content')
     <div class="container w-full bg-white p-3 rounded-xl shadow-xl">
         <div class="row m-3">
-            {!! Form::open(['method'=>'POST','route'=>['frames.store']]) !!}
+            {!! Form::open(['method'=>'POST','route'=>['frames.drive_store']]) !!}
             <input type="hidden" name="Quotation_Id" value="{{$Quotation_Id}}">
             <div  class="row bg-white p-4 shadow-lg rounded-lg">
                 <div class="col-sm-8 col-xs-12">

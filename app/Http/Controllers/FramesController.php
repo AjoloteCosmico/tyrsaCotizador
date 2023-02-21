@@ -152,6 +152,7 @@ class FramesController extends Controller
 
     public function drive_store(Request $request)
     {
+        
         $rules = [
             'amount' => 'required',
             'weight' => 'required',
